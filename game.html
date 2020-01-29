@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>World of Zoo home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <img class="birds" src="/image/birds.jpg" alt="Vogels">
+            <img class="elephant" src="/image/elephant.jpg" alt="Olifant">
+            <img class="giraffe" src="/image/giraffe.jpg" alt="Giraffe">
+            <img class="rhino" src="/image/rhino.jpg" alt="Neushoorn">
+            <img class="lion" src="/image/lion.jpg" alt="Leeuw">
+            <img class="monkey" src="/image/ape.jpg" alt="Aap">
+            <h1 class="header-titel">World of Zoo</h1>
+        </div>
+
+        <div class="header-bottom">
+            <nav class="navbar">
+                <ul>
+                    <li class="navbutton"><a class="link" href="home.html">Home</a></li>
+                    <li class="navbutton"><a class="link" href="tickets.html">Tickets</a></li>
+                    <li class="navbutton"><a class="link" href="prijzenlijst.html">Prijzenlijst</a></li>
+                    <li class="active"><a class="link" href="game.html">Game</a></li>
+                </ul>
+
+            </nav>
+        </div>
+
+
+    </header>
+
+    <main class="game-main">
+
+        <div class="gameuitleg">
+            <div class="gameuitlegbox">
+                <button onclick="uitlegWerk(true)" class="uitlegshow">Uitleg Game</button>
+            </div>
+
+            <div id="showul">
+                <ul class="ulbox">
+                    <li>Klik op de knop "Welk dier?" om een dier te genereren</li>
+                    <li>Kies een kleur</li>
+                    <li>Je kunt nu het dier na tekenen</li>
+                    <li>Klik op de knop "Reset" om het spel te resetten</li>
+                </ul>
+            </div>
+
+            <div id="sluitul">
+                <h1>Veel plezier!</h1>
+                <button class="uitlegweg" onclick="uitlegWerk(false)">Uitleg sluiten</button>
+            </div>
+        </div>
+
+        <div class="hetspel">
+
+            <div class="dierkiezen">
+                <button class="dierklik" onclick="kiesDier()">Welk dier?</button>
+                <h2>Dier om te tekenen:</h2>
+                <span id="randomDier" class="randomdiertekst"></span>
+            </div>
+
+            <div class="kleurkiezen">
+                <h2>Kies een kleur!</h2>
+                <div onclick="kiesKleur('red')" class="kleurvakrood"></div>
+                <div onclick="kiesKleur('blue')" class="kleurvakblauw"></div>
+                <div onclick="kiesKleur('green')" class="kleurvakgroen"></div>
+            </div>
+
+            <div class="tablespel">
+                <table class="spel">
+                    <tr>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                    </tr>
+                    <tr>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                    </tr>
+                    <tr>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                    </tr>
+                    <tr>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                    </tr>
+                    <tr>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                    </tr>
+                    <tr>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                    </tr>
+                    <tr>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                        <td style="height: 50px;" onclick="spelBlok(this)" class="tdspel"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="gekozenkleur">
+                <h2>Gekozen kleur</h2>
+                <div id="kleurVakGekozen"></div>
+                <button onclick="reset()" class="resetknop">Reset</button>
+            </div>
+
+
+
+        </div>
+
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <div class="contact">
+            <ul class="contact-ul1">
+                <li><i class="far fa-copyright"></i> World of Zoo</li>
+                <li>Maalderij 97</li>
+                <li>Info@worldofzoo.com</li>
+                <li>Tel: 020-01230-0300</li>
+            </ul>
+        </div>
+
+        <div class="openingstijden">
+            <ul class="contact-ul">
+                <li>Openingstijden:</li>
+                <li class="li-none">Ma t/m Vr: 10:00 - 20:00</li>
+                <li class="li-none">Za & Zo: 12:00 - 18:00</li>
+            </ul>
+        </div>
+
+        <div class="datum">
+            <ul class="contact-ul">
+                <li class="">Datum van vandaag:</li>
+                <li class="li-none">
+                    <p id="datum"></p>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <script src="js/gamescript.js"></script>
+</body>
+
+</html>

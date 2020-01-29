@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>World of Zoo home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <img class="birds" src="/image/birds.jpg" alt="Vogels">
+            <img class="elephant" src="/image/elephant.jpg" alt="Olifant">
+            <img class="giraffe" src="/image/giraffe.jpg" alt="Giraffe">
+            <img class="rhino" src="/image/rhino.jpg" alt="Neushoorn">
+            <img class="lion" src="/image/lion.jpg" alt="Leeuw">
+            <img class="monkey" src="/image/ape.jpg" alt="Aap">
+            <h1 class="header-titel">World of Zoo</h1>
+        </div>
+
+        <div class="header-bottom">
+            <nav class="navbar">
+                <ul>
+                    <li class="active"><a class="link" href="home.html">Home</a></li>
+                    <li class="navbutton"><a class="link" href="tickets.html">Tickets</a></li>
+                    <li class="navbutton"><a class="link" href="prijzenlijst.html">Prijzenlijst</a></li>
+                    <li class="navbutton"><a class="link" href="game.html">Game</a></li>
+                </ul>
+
+            </nav>
+        </div>
+
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Winkel wagen</h2>
+                </div>
+                <div class="modal-body">
+                    Hier komen de tickets
+                </div>
+                <div class="modal-footer">
+                    <h3>Totaal:<span id="totaal">0</span></h3>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-home">
+
+        <div class="home-container">
+
+            <div class="fotodier1">
+                <div class="foto"><img class="henry" src="/image/Henry.jpg" alt="Henry de Dolfijn">
+                    <div class="dier1-tekst">
+                        <h2>Onze dolfijnen show start om 16:00!</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="welkom">
+                <h1 class="welkom-titel">Hey jij daar!</h1>
+                <h2 class="welkom-tekst">
+                    <span>Welkom bij World of Zoo!</span>
+                    <p style="width: 500px;">Ons diertuin bestaat al sinds 1969 en bied een volle variatie in
+                        verschillende soorten dieren!
+                        Kom is een keertje langs en geniet van een mooie dag in ons dierentuin waar wij
+                        het leukste uit je dag halen.</p>
+
+                    <span>Bekijk onze website voor meer informatie!</span>
+                </h2>
+            </div>
+
+            <div class="fotodier2">
+                <div class="foto"><img class="panda" src="/image/panda.jpg" alt="Panda">
+                    <div class="dier2-tekst">
+                        <h2>Kom een bezoekje brengen bij het resort van onze nieuwe panda's!</h2>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <footer>
+
+        <div class="contact">
+            <ul class="contact-ul1">
+                <li><i class="far fa-copyright"></i> World of Zoo</li>
+                <li>Maalderij 97</li>
+                <li>Info@worldofzoo.com</li>
+                <li>Tel: 020-01230-0300</li>
+            </ul>
+        </div>
+
+        <div class="openingstijden">
+            <ul class="contact-ul">
+                <li>Openingstijden:</li>
+                <li class="li-none">Ma t/m Vr: 10:00 - 20:00</li>
+                <li class="li-none">Za & Zo: 12:00 - 18:00</li>
+            </ul>
+        </div>
+
+        <div class="datum">
+            <ul class="contact-ul">
+                <li class="">Datum van vandaag:</li>
+                <li class="li-none">
+                    <p id="datum"></p>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

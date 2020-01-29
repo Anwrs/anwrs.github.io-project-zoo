@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>World of Zoo home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <img class="birds" src="/image/birds.jpg" alt="Vogels">
+            <img class="elephant" src="/image/elephant.jpg" alt="Olifant">
+            <img class="giraffe" src="/image/giraffe.jpg" alt="Giraffe">
+            <img class="rhino" src="/image/rhino.jpg" alt="Neushoorn">
+            <img class="lion" src="/image/lion.jpg" alt="Leeuw">
+            <img class="monkey" src="/image/ape.jpg" alt="Aap">
+            <h1 class="header-titel">World of Zoo</h1>
+        </div>
+
+        <div class="header-bottom">
+            <nav class="navbar">
+                <ul>
+                    <li class="navbutton"><a class="link" href="home.html">Home</a></li>
+                    <li class="active"><a class="link" href="tickets.html">Tickets</a></li>
+                    <li class="navbutton"><a class="link" href="prijzenlijst.html">Prijzenlijst</a></li>
+                    <li class="navbutton"><a class="link" href="game.html">Game</a></li>
+                </ul>
+
+            </nav>
+        </div>
+
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Winkel wagen</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-boven">
+                        <div class="mand">
+                            <h1>Kinder tickets</h1>
+                            <p id="subtotaalK"></p>
+                        </div>
+
+                        <div class="mand">
+                            <h1>Normale tickets</h1>
+                            <p id="subtotaalN"></p>
+                        </div>
+
+                        <div class="mand">
+                            <h1>Familie tickets</h1>
+                            <p id="subtotaalF"></p>
+                        </div>
+                    </div>
+                    <div class="modal-onder">
+                        <div class="mand">
+                            <h2>Het totale bedrag is:</h2>
+                            <p id="totaals"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <h3>World of Zoo</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-home">
+        <div class="ticketbox">
+            <div class="tbox">
+                <div class="tbox-b">
+                    <div class="tbox-boven">
+                        <p class="kinderp">Kinder ticket</p>
+                        <p id="totaalbedragK"></p>
+                    </div>
+                    <div class="tbox-onder">
+                        <button class="sombox" onclick="minK()">-</button>
+                        <div class="somgetal"><input type="text" name="qty" class="gtl" id="gtlK" maxlength="2"></div>
+                        <button class="sombox" onclick="plusK()">+</button>
+                    </div>
+
+                </div>
+
+                <div class="tbox-b">
+                    <div class="tbox-boven">
+                        <p class="normaalp">Normale ticket</p>
+                        <p id="totaalbedragN"></p>
+                    </div>
+                    <div class="tbox-onder">
+                        <button class="sombox" onclick="minN()">-</button>
+                        <div id="somgetal"><input type="text" name="qty" class="gtl" id="gtlN" maxlength="2"></div>
+                        <button class="sombox" onclick="plusN()">+</button>
+                    </div>
+                </div>
+
+                <div class="tbox-b">
+                    <div class="tbox-boven">
+                        <p class="familiep">Familie ticket</p>
+                        <p id="totaalbedragF"></p>
+                    </div>
+                    <div class="tbox-onder">
+                        <button class="sombox" onclick="minF()">-</button>
+                        <div id="somgetal"><input type="text" name="qty" class="gtl" id="gtlF" maxlength="2"></div>
+                        <button class="sombox" onclick="plusF()">+</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="center">
+            <button class="shoppingcart" id="myCart">
+                <p style="font-size: 25px;" onclick="winkelWagen()">Winkelwagen <i id="myCart"
+                        class="fas fa-shopping-cart"></i></p>
+            </button>
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <div class="contact">
+            <ul class="contact-ul1">
+                <li><i class="far fa-copyright"></i> World of Zoo</li>
+                <li>Maalderij 97</li>
+                <li>Info@worldofzoo.com</li>
+                <li>Tel: 020-01230-0300</li>
+            </ul>
+        </div>
+
+        <div class="openingstijden">
+            <ul class="contact-ul">
+                <li>Openingstijden:</li>
+                <li class="li-none">Ma t/m Vr: 10:00 - 20:00</li>
+                <li class="li-none">Za & Zo: 12:00 - 18:00</li>
+            </ul>
+        </div>
+
+        <div class="datum">
+            <ul class="contact-ul">
+                <li class="">Datum van vandaag:</li>
+                <li class="li-none">
+                    <p id="datum"></p>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
